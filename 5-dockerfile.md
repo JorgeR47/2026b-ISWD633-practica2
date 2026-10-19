@@ -80,7 +80,7 @@ docker run -d --name mi_nginx -P mi_nginx:1.1
 ```
 
 ### ¿Con que puerto host se está realizando el mapeo?
-# Puerto 32768
+
 
 **¿Qué es una imagen huérfana?**
 # Es una imagen que no tiene asociación con ningun contenedor, carece de nombre y etiqueta.
