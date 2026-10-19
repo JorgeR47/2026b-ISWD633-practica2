@@ -57,14 +57,14 @@ No olvides verificar en qué directorio se encuentra el archivo Dockerfile
 ```
 
 **¿Cuántos pasos se han ejecutado?**
-# RESPONDER 
+# Dockerfile posee 7 instrucciones, sin embargo se consideran solo 5 porque EXPOSE y CMD no generan capas en la imagen.
 
 ### Inspeccionar la imagen creada
-# COMPLETAR CON UNA CAPTURA
+# ![alt text](image.png)
 
 **Modificar el archivo index.html para incluir su nombre y luego crear una nueva versión de la imagen anterior**
 **¿Cuántos pasos se han ejecutado? ¿Observa algo diferente en la creación de la imagen**
-
+#
 ## Mecanismo de caché
 Docker usa un mecanismo de caché cuando crea imágenes para acelerar el proceso de construcción y evitar la repetición de pasos que no han cambiado. Cada instrucción en un Dockerfile crea una capa en la imagen final. Docker intenta reutilizar las capas de una construcción anterior si no han cambiado, lo que reduce significativamente el tiempo de construcción.
 
@@ -76,13 +76,14 @@ Docker usa un mecanismo de caché cuando crea imágenes para acelerar el proceso
 ### Crear un contenedor a partir de las imagen creada, mapear todos los puertos
 ```
 
+docker run -d --name mi_nginx -P mi_nginx:1.1
 ```
 
 ### ¿Con que puerto host se está realizando el mapeo?
-# COMPLETAR CON LA RESPUESTA
+# Puerto 32768
 
 **¿Qué es una imagen huérfana?**
-# COMPLETAR CON LA RESPUESTA
+# Es una imagen que no tiene asociación con ningun contenedor, carece de nombre y etiqueta.
 
 ### Identificar imágenes huérfanas
 ```
